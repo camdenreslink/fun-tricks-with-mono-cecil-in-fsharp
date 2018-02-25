@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Mono.Cecil_FunTricks", "Mono.Cecil_FunTricks\Mono.Cecil_FunTricks.fsproj", "{F6927EB8-57DC-4FA3-9D1C-CD7E7B0B11C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF549D6E-3644-4434-8BA4-B4E3F60DEAF8}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6927EB8-57DC-4FA3-9D1C-CD7E7B0B11C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6927EB8-57DC-4FA3-9D1C-CD7E7B0B11C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6927EB8-57DC-4FA3-9D1C-CD7E7B0B11C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6927EB8-57DC-4FA3-9D1C-CD7E7B0B11C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C433FCD6-87CC-485D-87EA-571322686143}
+	EndGlobalSection
+EndGlobal
