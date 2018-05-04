@@ -1,4 +1,7 @@
 ﻿open Mono.Cecil
+open System
+open DependencyGraph
+open Newtonsoft.Json
 
 [<EntryPoint>]
 let main argv = 
@@ -10,10 +13,15 @@ let main argv =
     let assemblies = (AssemblyLoader.LoadAllAssembliesByPrefix prefix argv.[0])
                         |> Array.filter (fun a -> 
                             a.MainModule.Name <> "SmartStore.Licensing.dll")
-    
-    let disposableTypes = assemblies 
-                            |> Seq.collect (AssemblyQueries.FindAllTypesImplementingInterface 
-                                typeof<System.IDisposable>.FullName)
-                            |> Seq.toArray
+
+    let type' = assemblies
+                        |> Seq.collect (fun a -> 
+                            AssemblyQueries.FindTypeByFullName "SmartStore.Core.Domain.Customers.Customer" a)
+                        |> Seq.exactlyOne
+
+
+    let graph = GenerateDependencyGraph type'
+
+    let json = JsonConvert.SerializeObject(graph)
 
     0 (* return an integer exit code *)
